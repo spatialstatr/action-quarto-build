@@ -17,6 +17,6 @@ RUN wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.2.269/qua
     && dpkg -i quarto-1.2.269-linux-amd64.deb
 
 ### Install R packages
-RUN Rscript -e "install.packages(c('tidyverse', 'purrr', 'sf', 'tmap'), clean=T, quiet=T)"
+RUN Rscript -e "install.packages(c('tidyverse', 'purrr', 'sf', 'tmap', 'jsonlite'), clean=T, quiet=T)"
 
 ENTRYPOINT [ "quarto", "render" ]
